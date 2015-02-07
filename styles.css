@@ -254,11 +254,11 @@ h2 {
     float:left;
     width: 200px;
     height: 100%;
-    background-color: #3B495B;
+    background-color: #3B495B !important;
 }
 
 #menu li {
-    background-color:#3B495B;
+    background-color:#3B495B !important;
     border-bottom: 1px solid #888;
 }
 
