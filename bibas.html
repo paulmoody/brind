@@ -1,0 +1,78 @@
+<html>
+<head>
+<script src="css/source-sans-pro.js"></script>
+<script src="lib/iscroll.js"></script>
+<link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+<script id="home-tpl" type="text/x-handlebars-template">
+   
+
+	   <div id="menu">
+        <ul>
+            <li><a href="#">Mi Cuenta</a></li>
+            <li><a href="#">Pais: Venezuela</a></li>
+            <li><a href="#">Lista de deseos</a></li>
+            <li><a href="#">Acerca de Flashclicks</a></li>
+        </ul>
+    </div>
+    <div id="right">
+        <div id="menubar">
+        
+		<ul class="nav">
+		  <li id="button" class="leftm"><img src="img/menuico2.png" /></li>
+		  <li class="rightm"><img src="img/Search.png" id="puppies"/></li>
+		  <li class="centerm">
+		  	<div class="logopri" id="1"><img src="img/logonar.jpg" /></div>
+		  	<div id="2" style="display:none;">My Dynamic Content</div>
+		  </li>
+		</ul>
+            
+        </div>
+    
+    
+    <div id="id01">
+    <div class="scroll"><ul class='employee-list'></ul></div>
+    </div>
+</script>
+
+<script id="employee-li-tpl" type="text/x-handlebars-template">
+    {{#.}}
+    <li><a href="#employees/{{this.id}}">{{this.firstName}} {{this.lastName}}</a></li>
+    {{/.}}
+</script>
+
+
+<script src="phonegap.js"></script>
+<script src="lib/jquery-1.8.2.min.js"></script>
+<script src="lib/handlebars.js"></script>
+<script src="js/regbibas.js"></script>
+<script src="js/storage/memory-store.js"></script>
+<script src="mainbibas.js"></script>
+
+<script type="text/javascript">
+
+$('#button').toggle( 
+    function() {
+        $('#right').animate({ left: 200 }, 'slow', function() {
+            //$('#button').html('Close');
+        });
+    }, 
+    function() {
+        $('#right').animate({ left: 0 }, 'slow', function() {
+            //$('#button').html('Menu');
+        });
+    }
+);
+
+$('#puppies').click(function() {
+  $('#1').html('<input name="Button1" type="text" value="" style="width: 200px; height: 42px; font-size: 20;" />');
+});
+
+</script>
+
+
+</body>
+</html>

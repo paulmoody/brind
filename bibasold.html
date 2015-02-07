@@ -1,0 +1,32 @@
+<html>
+<head>
+<script src="css/source-sans-pro.js"></script>
+<script src="lib/iscroll.js"></script>
+<link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+<script id="home-tpl" type="text/x-handlebars-template">
+    <div class="header"><a href="pagar.html" class="button header-button header-button-left"><img src="img/menuico2.png"></a><h1><img src="img/logolongban.jpg" /></h1></div>
+    <div id="id01">
+    <div class="scroll"><ul class='employee-list'></ul></div>
+    </div>
+</script>
+
+<script id="employee-li-tpl" type="text/x-handlebars-template">
+    {{#.}}
+    <li><a href="#employees/{{this.id}}">{{this.firstName}} {{this.lastName}}</a></li>
+    {{/.}}
+</script>
+
+
+<script src="phonegap.js"></script>
+<script src="lib/jquery-1.8.2.min.js"></script>
+<script src="lib/handlebars.js"></script>
+<script src="js/regbibas.js"></script>
+<script src="js/storage/memory-store.js"></script>
+<script src="mainbibas.js"></script>
+
+</body>
+</html>

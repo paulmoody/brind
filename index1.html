@@ -1,0 +1,60 @@
+<html>
+<head>
+<script src="css/source-sans-pro.js"></script>
+<script src="lib/iscroll.js"></script>
+<link href="styles.css" rel="stylesheet">
+<script src="js/jquery-latest.min.js"></script>
+<script src="js/unslider.min.js"></script>
+<style type="text/css">
+.banner { position: relative; overflow: auto; }
+    .banner li { list-style: none; }
+        .banner ul li { float: left; }
+.listado li
+{
+display: inline !important;
+list-style-type: none;
+padding-right: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<script id="home-tpl" type="text/x-handlebars-template">
+    <div class="header"><a href="pagar.html" class="button header-button header-button-left"><img src="img/menuico2.png" /></a><h1><img src="img/logolongban.jpg" /><img src="img/Searchtiny.png" /></h1></div>
+    <div id="id01">
+    <div class="scroll"><ul class='employee-list'>
+    
+    		<div class="banner">
+				    <ul>
+				        <li><img src="img/bibas.png"></li>
+				        <li><img src="img/bibas.png"></li>
+				        <li><img src="img/bibas.png"></li>
+				    </ul>
+				</div>
+    
+    </ul></div>
+    </div>
+</script>
+
+<script id="employee-li-tpl" type="text/x-handlebars-template">
+    {{#.}}
+    <li><a href="#employees/{{this.id}}">{{this.firstName}} {{this.lastName}}</a></li>
+    {{/.}}
+</script>
+
+
+<script src="phonegap.js"></script>
+<script src="lib/jquery-1.8.2.min.js"></script>
+<script src="lib/handlebars.js"></script>
+<script src="js/registrosprin.js"></script>
+<script src="js/storage/memory-store.js"></script>
+<script src="mainpor.js"></script>
+<script type="text/javascript">
+$(function() {
+    //$('.banner').unslider();
+});
+
+</script>
+</body>
+</html>

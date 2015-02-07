@@ -1,0 +1,104 @@
+<html>
+
+<head>
+<script src="css/source-sans-pro.js"></script>
+<script src="lib/iscroll.js"></script>
+<link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="menu">
+	<ul>
+		<li><a href="#">Menu Item 1</a></li>
+		<li><a href="#">Menu Item 2</a></li>
+		<li><a href="#">Menu Item 3</a></li>
+		<li><a href="#">Menu Item 4</a></li>
+		<li><a href="#">Menu Item 5</a></li>
+		<li><a href="#">Menu Item 6</a></li>
+		<li><a href="#">Menu Item 7</a></li>
+		<li><a href="#">Menu Item 8</a></li>
+		<li><a href="#">Menu Item 9</a></li>
+		<li><a href="#">Menu Item 10</a></li>
+		<li><a href="#">Menu Item 11</a></li>
+		<li><a href="#">Menu Item 12</a></li>
+	</ul>
+</div>
+<div id="right">
+	<div id="menubar">
+		<div id="button">
+			Menu </div>
+	</div>
+	<script id="home-tpl" type="text/x-handlebars-template">
+			    
+			    <div id="menu">
+        <ul>
+            <li><a href="#">Menu Item 1</a></li>
+            <li><a href="#">Menu Item 2</a></li>
+            <li><a href="#">Menu Item 3</a></li>
+            <li><a href="#">Menu Item 4</a></li>
+            <li><a href="#">Menu Item 5</a></li>
+            <li><a href="#">Menu Item 6</a></li>
+            <li><a href="#">Menu Item 7</a></li>
+            <li><a href="#">Menu Item 8</a></li>
+            <li><a href="#">Menu Item 9</a></li>
+            <li><a href="#">Menu Item 10</a></li>
+            <li><a href="#">Menu Item 11</a></li>
+            <li><a href="#">Menu Item 12</a></li>
+        </ul>
+    </div>
+    <div id="right">
+        <div id="menubar">
+            <div id="button">
+                Menu
+            </div>
+        </div>
+
+			    
+			    <div id="id01">
+			    <div class="scroll"><ul class='employee-list'></ul></div>
+			    </div>
+			</script>
+</div>
+<!--..
+<script id="home-tpl" type="text/x-handlebars-template">
+    <div class="header"><a href="pagar.html" class="button header-button header-button-left"><img src="img/menuico2.png"></a><h1><img src="img/logolongban.jpg" /></h1></div>
+    <div id="id01">
+    <div class="scroll"><ul class='employee-list'></ul></div>
+    </div>
+</script>
+
+<script id="employee-li-tpl" type="text/x-handlebars-template">
+    {{#.}}
+    <li><a href="#employees/{{this.id}}">{{this.firstName}} {{this.lastName}}</a></li>
+    {{/.}}
+</script>
+
+.-->
+<script src="phonegap.js"></script>
+<script src="lib/jquery-1.8.2.min.js"></script>
+<script src="lib/handlebars.js"></script>
+<script src="js/regbibas.js"></script>
+<script src="js/storage/memory-store.js"></script>
+<script src="mainbibas.js"></script>
+<script type="text/javascript">
+
+$('#button').toggle( 
+    function() {
+        $('#right').animate({ left: 250 }, 'slow', function() {
+            $('#button').html('Close');
+        });
+    }, 
+    function() {
+        $('#right').animate({ left: 0 }, 'slow', function() {
+            $('#button').html('Menu');
+        });
+    }
+);
+
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+
+<!-- saved from url=(0127)file:///C:/xampp/htdocs/app/phonegap-workshop-solutions-master/phonegap-workshop-solutions-master/part09/index.html#employees/1 -->
+<html class="wf-sourcesanspro-i4-active wf-sourcesanspro-i7-active wf-sourcesanspro-n4-active wf-sourcesanspro-n7-active wf-active">
+<head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<script src="css/source-sans-pro.js"></script>
+<script src="lib/iscroll.js"></script>
+<link href="styles.css" rel="stylesheet">
+<style type="text/css">
+.style1 {
+	font-size: x-large;
+}
+</style>
+<script src="lib/jquery-1.8.2.min.js"></script>
+<script src="js/registros.js"></script>
+<script type="text/javascript">
+
+	function GetURLParameter(sParam) {
+            //var sPageURL ="http://www.xzy.com/AMS/Audit/Agency/10017397555";
+
+            var sPageURL = window.location.href;
+            var indexOfLastSlash = sPageURL.lastIndexOf("#");
+
+            if(indexOfLastSlash>0 && sPageURL.length-1!=indexOfLastSlash)
+                return sPageURL.substring(indexOfLastSlash+1);
+            else 
+               return 0;
+        }
+    	
+cosa=GetURLParameter("0");
+cosa=cosa-1;
+//alert(cosa);
+//src="img/thor100.png"
+
+
+</script>
+
+</head>
+<body><div>
+    <div class="header"><a href="index.html" class="button header-button header-button-left">Volver</a><h1>SU ORDEN</h1></div>
+    <div class="details">
+        <img id="image"  style="float:left;margin:10px;" height="125" width="100">
+        <h1 class="style1"><span class="nomArt"></span></h1>
+        <h2><i><span>Peliculas</span></i></h2>
+        <ul>
+            <li><a href="tel:212-999-8887">Precio<br>120 Bfs</a></li>
+            <li ce><a href="bancos.html"  class="button">PAGAR</a></li>
+            <li><p><i><span  class="synop"></span></i></p></li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+
+var app = {
+
+ 	dibujarRegistrosParam: function(arr) {
+    	    	var out = "";
+    	    	var i;
+    	   		e = arr[cosa];
+    	    		$('.nomArt').append(e.firstName);
+    	    		$('.synop').append(e.lastName);
+    	    		$('#image').attr('src',e.image);
+    	    		//alert(e.firstName);															  																	
+	},
+		  
+    initialize: function() {
+       	this.dibujarRegistrosParam(registrosJson);
+	}
+};
+app.initialize();
+
+</script>
+
+
+</body>
+</html>
