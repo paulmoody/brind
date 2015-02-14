@@ -29,7 +29,7 @@ padding-right: 20px;
             <li><a href="brind1.html">Mi brindis</a></li>
             <li><a href="#">Favoritos</a></li>
             <li><a href="#">Notificaciones</a></li>
-            <li><a href="#">Artículos y reseñas</a></li>
+            <li><a href="#">Art&iacute;culos y reseñas</a></li>
             <li><a href="#">Sociales</a></li>
 			<li><a href="#">Novedades</a></li>
 			<li><a href="#">Ajustes</a></li>
@@ -45,11 +45,18 @@ padding-right: 20px;
         
 		<ul class="nav">
 		  <li id="button" class="leftm"><img src="img/menuico2.png" /></li>
-		  <li class="rightm"><img src="img/Search.png" id="puppies"/></li>
+		  <li class="rightm">
+		  	<img src="img/Search.png" id="puppies"/>
+		  	<!---<div id="wrap">
+			  <form action="" autocomplete="on">
+			  <input id="search" name="search" type="text" placeholder="What're we looking for ?"><input id="search_submit" value="Rechercher" type="submit">
+			  </form>
+			</div>-->
+		  </li>
 		  <li class="centerm">
 		  	<div class="logopri" id="1"><img src="img/logobrindis25.png" /></div>
 		  	<div class="logoprititulo" id="1">Brindis</div>
-		  	<div id="2" style="display:none;">My Dynamic Content</div>
+		  	
 		  </li>
 		</ul>
             
@@ -68,35 +75,38 @@ padding-right: 20px;
 				    </ul>
 	</li>
 	-->
-    <li><a href=""><img src="img/grid1.png"></a></li>
-    <li><a href=""><img src="img/grid2.png"></a></li>
-    <li><a href=""><img src="img/grid3.png"></a></li>
-    <li><a href=""><img src="img/grid4.png"></a></li></ul></div>
+    <li><a href=""><img src="img/grid1.png" style="width:100%"></a></li>
+    <li><a href=""><img src="img/grid2.png" style="width:100%"></a></li>
+    <li><a href=""><img src="img/grid3.png" style="width:100%"></a></li>
+    <li><a href=""><img src="img/grid4.png" style="width:100%"></a></li></ul></div>
     </div>
 
 <script type="text/javascript">
 
-$(function() {
-    $('.banner').unslider();
-});
 
 
 $('#button').toggle( 
     function() {
-        $('#right').animate({ left: 200 }, 'slow', function() {
+        $('#right').animate({ left: 200 }, 'fast', function() {
             //$('#button').html('Close');
         });
     }, 
     function() {
-        $('#right').animate({ left: 0 }, 'slow', function() {
+        $('#right').animate({ left: 0 }, 'fast', function() {
             //$('#button').html('Menu');
         });
     }
 );
 
-$('#puppies').click(function() {
-  $('#1').html('<input name="Button1" type="text" value="" style="width: 200px; height: 42px; font-size: 20;" />');
-});
+$('#puppies').toggle(
+function() {
+  $('#1').html('<input id="botoxx" name="Button1" type="text" value="" style="width: 200px; height: 42px; font-size: 20;" />');
+  $('#botoxx').focus();
+},
+function() {
+  $('#1').html('<img src="img/logobrindis25.png" />');
+}
+);
 
 
 

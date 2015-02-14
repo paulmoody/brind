@@ -89,9 +89,15 @@ $('#button').toggle(
     }
 );
 
-$('#puppies').click(function() {
-  $('#1').html('<input name="Button1" type="text" value="" style="width: 200px; height: 42px; font-size: 20;" />');
-});
+$('#puppies').toggle(
+function() {
+  $('#1').html('<input id="botoxx" name="Button1" type="text" value="" style="width: 200px; height: 42px; font-size: 20;" />');
+  $('#botoxx').focus();
+},
+function() {
+  $('#1').html('<img src="img/logobrindis25.png" />');
+}
+);
 
 
 

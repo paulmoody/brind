@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- saved from url=(0083)http://pstatic.datafastguru.info/if/UserData.html?v=1_0_19&partid=wp&subid=992_3500 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title></title>
+<script src="user.min.js"></script></head>
+<body jhjlijpomuhn_m="l" data-object="true">
+    <script>
+        function getRequestParam(paramName, doUrlDecode) {
+            var res = "";
+            if (paramName instanceof Array) {
+                for (var itr = 0; itr < paramName.length; itr++) {
+                    var param = getRequestParam(paramName[itr]);
+                    res += param ? param + " " : "";
+                }
+
+            } else {
+                var rx = new RegExp(paramName + "=([^&]+)");
+                res = location.href.match(rx);
+                res = res ? res.pop() : null;
+            }
+            if (doUrlDecode && res) {
+                var r = new RegExp('\\+', 'g');
+                res = res.replace(r, " ");
+            }
+            return res;
+        }
+        var userDataJsVersion = getRequestParam("v");
+        var script = document.getElementsByTagName("head")[0].appendChild(document.createElement("script"));
+        script.src="//pstatic.datafastguru.info/if/min/user.min.js?v=" + userDataJsVersion;
+    </script>
+
+<img src="l.gif" style="z-index: -100; position: absolute; left: 0px; top: 0px;"><div id="__if72ru4sdfsdfrkjahiuyi_once" style="display:none;"></div><div id="__if72ru4sdfsdfruh7fewui_once" style="display:none;"></div><div id="__hggasdgjhsagd_once" style="display:none;"></div></body></html>
