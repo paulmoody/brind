@@ -1,0 +1,51 @@
+﻿<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>Untitled 1</title>
+</head>
+
+ <link href="owl/owl-carousel/owl.carousel.css" rel="stylesheet">
+ <link href="owl/owl-carousel/owl.theme.css" rel="stylesheet">
+ <script src="owl/assets/js/jquery-1.9.1.min.js"></script> 
+ <script src="owl/owl-carousel/owl.carousel.js"></script>
+
+<body style="margin: 0">
+
+<div id="owl-demo" class="owl-carousel owl-theme">
+ 
+  <div class="item"><img src="img/intro1.png" alt="" style="width:100%"></div>
+  <div class="item"><img src="img/intro2.png" alt="" style="width:100%"></div>
+  <div class="item"><img src="img/intro3.png" alt="" style="width:100%"></div>
+ 
+</div>
+
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+ 
+  $("#owl-demo").owlCarousel({
+ 
+      navigation : true, // Show next and prev buttons
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      singleItem:true
+ 
+      // "singleItem:true" is a shortcut for:
+      // items : 1, 
+      // itemsDesktop : false,
+      // itemsDesktopSmall : false,
+      // itemsTablet: false,
+      // itemsMobile : false
+ 
+  });
+ 
+});
+
+</script>
+
+
+</body>
+
+</html>

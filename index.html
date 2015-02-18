@@ -1,51 +1,85 @@
-﻿<html>
 
-<head>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-<title>Untitled 1</title>
+<!-- saved from url=(0069)file:///C:/Users/tatoww/Documents/GitHub/appresto/appresto/index.html -->
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<script src="css/source-sans-pro.js"></script>
+<link rel="stylesheet" href="css/main.css">
+<style type="text/css">
+</style>
 </head>
 
- <link href="owl/owl-carousel/owl.carousel.css" rel="stylesheet">
- <link href="owl/owl-carousel/owl.theme.css" rel="stylesheet">
- <script src="owl/assets/js/jquery-1.9.1.min.js"></script> 
- <script src="owl/owl-carousel/owl.carousel.js"></script>
+<body>
+   
+	         
+		       
 
-<body style="margin: 0">
-
-<div id="owl-demo" class="owl-carousel owl-theme">
- 
-  <div class="item"><img src="img/intro1.png" alt="" style="width:100%"></div>
-  <div class="item"><img src="img/intro2.png" alt="" style="width:100%"></div>
-  <div class="item"><img src="img/intro3.png" alt="" style="width:100%"></div>
- 
+	<div id="wrapper">
+     <div class="slidepage-container myPageContainerClass">
+         <div id="badges-slidepage-1" page="1" class="psPage current transition center">
+             <div class="content">
+                <a href="brind0.html"><img src="img/intro1.png" style="width:100%"></a>
+             </div>
+         </div>
+         <div id="badges-slidepage-2" page="2" class="psPage right">
+             <div class="content">
+                <a href="brind0.html"><img src="img/intro2.png" style="width:100%"></a>
+             </div>
+         </div>
+         <div id="badges-slidepage-3" page="3" class="psPage right">
+             <div class="content">
+                <a href="brind0.html"><img src="img/intro3.png" style="width:100%"></a>
+             </div>
+         </div>
+         <div id="badges-slidepage-4" page="4" class="psPage right">
+             <div class="content">
+                <a href="brind0.html"><img src="img/intro4.png" style="width:100%"></a>
+             </div>
+         </div>
+     </div>
+     <div class="footer-menu myPageContainerClass">
+         <ul class="pager clearfix">
+             <li class="active"></li>
+             <li class=""></li>
+             <li class=""></li>
+             <li class=""></li>
+         </ul>		 
+     </div>        
 </div>
 
+<script type="text/javascript" src="res/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="res/quo.js"></script>
+<script type="text/javascript" src="res/fastclick.js"></script>
+<script type="text/javascript" src="res/pagingSlider.js"></script>
+<script type="text/javascript">
+
+    $$('#wrapper').swipeLeft(function(){
+        pagingSlider.slidePageFrom('.myPageContainerClass', 'right');
+    });
+    
+    $$('#wrapper').swipeRight(function(){
+        pagingSlider.slidePageFrom('.myPageContainerClass', 'left');
+    });
+</script>
+
+ 
+   <!-- <div id="id01">
+      ...
+    <li class="banner">
+				    <ul>
+				        <li><a href=""><img src="img/banner1.png"></a></li>
+				        <li><a href=""><img src="img/banner2.jpg"></a></li>
+				        <li><a href=""><img src="img/banner3.jpg"></a></li>
+				    </ul>
+	</li>
+	
+	<ul>
+    <li><a href="intro2.html"><img src="img/intro1.png" style="max-width:100%;height:auto; padding-left:0px;padding-right:0px;"></a></li>
+    </ul>
+    </div>-->
 
 <script type="text/javascript">
 
-$(document).ready(function() {
- 
-  $("#owl-demo").owlCarousel({
- 
-      navigation : true, // Show next and prev buttons
-      slideSpeed : 300,
-      paginationSpeed : 400,
-      singleItem:true
- 
-      // "singleItem:true" is a shortcut for:
-      // items : 1, 
-      // itemsDesktop : false,
-      // itemsDesktopSmall : false,
-      // itemsTablet: false,
-      // itemsMobile : false
- 
-  });
- 
-});
 
 </script>
 
-
-</body>
-
-</html>
+</body></html>
