@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Untitled 1</title>
+</head>
+
+<body>
+
+<input type="text" name="username" id="username"/>
+<button id="save">Save</button>
+<button id="load">Load</button>
+<button id="clear">Clear</button>
+ 
+<script type="text/javascript">
+$(function() {
+   // Save input value to localStorage
+   $('#save').on('click', function() {
+      var username = $('#username').val();
+      localStorage.setItem("username", username);
+   });
+   // Load input value from localStorage
+   $('#load').on('click', function() {
+      var username = localStorage.getItem('username') || '<empty>';
+      $('#username').val(username);
+   });
+   // Clear localStorage
+   $('#clear').on('click', function() {
+      localStorage.clear();
+   });
+});
+</script>
+
+
+</body>
+
+</html>
